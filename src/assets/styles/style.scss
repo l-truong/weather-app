@@ -1,0 +1,144 @@
+$font-color: rgba(255,255,255,0.8);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    font-family: 'montserrat', sans-serif;    
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    
+    &.warm {
+        background-color: rgba(86,204,242,0.5);  /* fallback for old browsers */
+        background-color: -webkit-linear-gradient(to top, rgba(47,128,237,0.5), rgba(86,204,242,0.5));  /* Chrome 10-25, Safari 5.1-6 */
+        background-color: linear-gradient(to top, rgba(47,128,237,0.5), rgba(86,204,242,0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    &.cold {
+        background-color: rgba(133,147,152,0.5);  /* fallback for old browsers */
+        background-color: -webkit-linear-gradient(to bottom, rgba(133,147,152,0.5), rgba(40,48,72,0.5));  /* Chrome 10-25, Safari 5.1-6 */
+        background-color: linear-gradient(to bottom, rgba(133,147,152,0.5), rgba(40,48,72,0.5));
+    }
+
+    #contain {  
+        transition: 0.4s;      
+        height: 45rem;
+        width: 25rem;
+        border-radius: 2.5rem;
+        border: 0.5rem solid black;
+        box-shadow: 16px 28px 29px -16px rgba(0,0,0,0.6);
+        -webkit-box-shadow: 16px 28px 29px -16px rgba(0,0,0,0.6);
+        -moz-box-shadow: 16px 28px 29px -16px rgba(0,0,0,0.6);
+        padding: 2.8rem;
+        color: $font-color;
+    
+        background-image: url('~@/assets/img/brooklyn-2858985_1280.png');
+        background-size: 140%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+     
+        &.warm {
+            background-color: rgb(86,204,242);  /* fallback for old browsers */
+            background-color: -webkit-linear-gradient(to top, rgb(47, 128, 237), rgb(86,204,242));  /* Chrome 10-25, Safari 5.1-6 */
+            background-color: linear-gradient(to top, rgb(47, 128, 237, 1), rgb(86,204,242)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        &.cold {
+            background-color: rgb(133,147,152);  /* fallback for old browsers */
+            background-color: -webkit-linear-gradient(to bottom, rgb(133,147,152), rgb(40,48,72));  /* Chrome 10-25, Safari 5.1-6 */
+            background-color: linear-gradient(to bottom, rgb(133,147,152), rgb(40,48,72)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .date-box { 
+            font-size: 1.25rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .search-box { 
+            width: 100%;
+            margin-bottom: 2rem;
+            .search-bar { 
+                display: block;
+                width: 100%;
+                padding: 1rem;    
+                font-size: 1.25rem;
+                color: $font-color;
+                appearance: none;
+                border:none;
+                outline: none;
+                background: none;
+                box-shadow: 0px 0px 8px $font-color;
+                border-radius: 2rem;
+                transition: 0.4s;
+                &:focus {
+                    box-shadow: 0px 0px 16px $font-color;
+                }
+            }        
+        }
+        .weather-wrap { 
+            display: flex;
+            flex-direction: column;
+            .weather-additional { 
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;           
+                margin-bottom: 3rem;
+                .cloud { 
+                }
+                .wind { 
+                }
+                .humidity { 
+                }
+            }
+            .weather-temp { 
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 3rem;
+                .temp {                 
+                    font-size: 6rem;
+                    font-weight: 600;                
+                    line-height: 0;
+                }
+                .temp_additional { 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 4.5rem;
+                    .temp_celcius { 
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                    .temp_minmax {
+                        .temp_max { 
+                        }
+                        .temp_min { 
+                        }
+                    }				
+                }
+            }	
+            .weather_sky {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;          
+                svg {
+                    font-size: 6.5rem;
+                    padding-bottom: 1rem;
+                }
+                .weather {
+    
+                }
+            }	
+        }
+    }
+}
