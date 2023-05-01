@@ -1,24 +1,4 @@
 # vue-weather
+https://dainty-torte-e1c7d5.netlify.app/
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![09-weather app](https://user-images.githubusercontent.com/11521905/235499620-36aa94d7-34c9-4c9e-a690-5ca1383036ce.png)
